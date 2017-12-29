@@ -13,5 +13,5 @@ Just run the MNIST_test.py file. The network architecture is for demonstration p
  - Transposed convolutions
 
 ### References:
-- Chen, Liang-Chieh, et al. "Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs." arXiv preprint arXiv:1606.00915 (2016).
+- Yu, Fisher, and Vladlen Koltun. "Multi-scale context aggregation by dilated convolutions." arXiv preprint arXiv:1511.07122 (2015).
 
