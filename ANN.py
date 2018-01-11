@@ -181,7 +181,7 @@ class ANN:
     def trainstep(self, learning_rate=0.01, l2 = 0.0001):
         for layer in self.layers:
             for weight, grad in zip(layer.params, layer.grads):
-                weight -= learning_rate * grad - l2 * weight
+                weight -= learning_rate * grad + l2 * weight
 
 
 

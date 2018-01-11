@@ -253,6 +253,44 @@ def backward_relu(top_grad, cache):
     return top_grad * cache
 
 
+def sigmoid(x):
+    """
+    Performs the element-wise sigmoid function
+    :param x: The input tensor
+    :return: The sigmoided tensor
+    """
+    return 1.0 / (1 + np.exp(-x))
+
+
+def backward_sigmoid(top_grad, output):
+    """
+    Performs the backward pass on the sigmoid operation
+    :param top_grad: The grad from the next operation
+    :param output: The output of this operation
+    :return: The gradient wrt the input of this op
+    """
+    return top_grad * output * (1 - output)
+
+def swish(x):
+    """
+    Performs the element-wise swish operation
+    :param x: The input tensor
+    :return: The swished tensor and a cache
+    """
+    cache = sigmoid(x)
+    return x * cache, cache
+
+def backward_swish(top_grad, output, cache):
+    """
+    Performs the backward pass on the swish operation
+    :param top_grad: The gradient from the next operation
+    :param output: The output of this operation
+    :param cache: The cache from the forward pass
+    :return: The gradient wrt the inputs of this operation
+    """
+    return top_grad * (cache + output * (1 - cache))
+
+
 def softmax(x):
     """
     Performs the softmax operation on a 2D tensor
