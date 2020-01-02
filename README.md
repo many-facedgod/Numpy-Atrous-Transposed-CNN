@@ -1,6 +1,6 @@
 # Numpy Atrous/Dilated and Transposed Convolutions
 
-A pure numpy-GEMM based implementation of transposed convolutions which are used for upscaling the tensors and dilated convolutions proposed in [Multi-Scale Context Aggregation by Dilated Convolutions](https://arxiv.org/abs/1511.07122) by Yu et al. The convolutions are performed by matrix multiplications by transforming the image and the filers into matrices. The loops in the transformation routines are numba-compatible and therefore can be compiled using the numba JIT.
+A pure numpy-based implementation of transposed convolutions which are used for upscaling the tensors and dilated convolutions proposed in [Multi-Scale Context Aggregation by Dilated Convolutions](https://arxiv.org/abs/1511.07122) by Yu et al. The convolutions are performed by matrix multiplications by transforming the image and the filers into matrices. The loops in the transformation routines are numba-compatible and therefore can be compiled using the numba JIT.
 
 ## Requirements
 - Python 3
