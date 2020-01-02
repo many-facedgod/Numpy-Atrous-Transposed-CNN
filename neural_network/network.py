@@ -472,10 +472,3 @@ class Network:
             v_hat = second_moment / (1 - beta_2 ** self.time_step)
             param -= alpha * m_hat / (np.sqrt(v_hat) + epsilon) + l2 * param
         self.time_step += 1
-
-
-
-
-
-
-
