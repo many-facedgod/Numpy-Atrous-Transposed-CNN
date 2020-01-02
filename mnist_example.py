@@ -9,7 +9,8 @@ from neural_network.network import *
 
 def load_data():
     """Load the MNIST data and normalize it."""
-    (trainx, trainy), (valx, valy), (testx, testy) = pickle.load(gzip.open("mnist_one_hot.pkl.gz"), encoding="latin1")
+    (trainx, trainy), (valx, valy), (testx, testy) = pickle.load(gzip.open("data/mnist_one_hot.pkl.gz"),
+                                                                 encoding="latin1")
     trainy = np.argmax(trainy, axis=1)
     valy = np.argmax(valy, axis=1)
     testy = np.argmax(testy, axis=1)
